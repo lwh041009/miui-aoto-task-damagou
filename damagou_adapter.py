@@ -20,6 +20,7 @@ def get_damagou_userkey():
     """Read the Damagou user key from env or config."""
     return (
         os.getenv("DAMAGOU_USERKEY")
+        or getattr(ConfigManager.data_obj.preference, "damagou_userkey", "")
         or ConfigManager.data_obj.preference.geetest_params.get("userkey")
         or ConfigManager.data_obj.preference.get_geetest_params.get("userkey")
         or ""

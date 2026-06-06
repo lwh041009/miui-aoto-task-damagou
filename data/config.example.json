@@ -1,9 +1,9 @@
 {
     "preference": {
+        "damagou_userkey": "",
         "geetest_url": "",
         "geetest_method": "get",
         "geetest_params": {
-            "userkey": "",
             "captchaId": "{captcha_id}",
             "isJson": "2"
         },
@@ -18,7 +18,6 @@
         "get_geetest_url": "",
         "get_geetest_method": "get",
         "get_geetest_params": {
-            "userkey": "",
             "captchaId": "{captcha_id}",
             "isJson": "2"
         },

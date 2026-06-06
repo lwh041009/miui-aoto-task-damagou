@@ -37,7 +37,7 @@ Copy-Item data/config.example.json data/config.json
 
 `data/config.json` 包含真实账号、cookie、token 和推送 key，已经被 `.gitignore` 忽略；`data/config.example.json` 是安全模板，可以提交到仓库。
 
-打码狗 `userkey` 可以填写在 `preference.geetest_params.userkey` 和 `preference.get_geetest_params.userkey`，也可以通过环境变量 `DAMAGOU_USERKEY` 提供。
+打码狗 `userkey` 填在 `preference.damagou_userkey`，也可以通过环境变量 `DAMAGOU_USERKEY` 提供。
 
 每个账号主要需要这些字段：
 

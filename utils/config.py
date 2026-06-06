@@ -129,6 +129,7 @@ class OnePush:
 class Preference:
     def __init__(
         self,
+        damagou_userkey="",
         geetest_url="",
         geetest_method: Literal["post", "get"] = "post",
         geetest_params: Optional[dict] = None,
@@ -153,6 +154,7 @@ class Preference:
         get_geetest_captcha_output_path="$.data.captcha_output",
         get_geetest_try_count=20,
     ):
+        self.damagou_userkey = damagou_userkey
         self.geetest_url = geetest_url
         self.geetest_method = geetest_method
         self.geetest_params = geetest_params or {}
