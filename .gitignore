@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Logs and runtime files
+logs/
+*.log
+*.pid
+
+# Local secrets and account data
+data/config.json
+data/*.bak
+*.bak
+*.mybak
+.env
+.env.*
+
+# Build and package output
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Test and cache files
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

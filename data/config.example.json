@@ -1,0 +1,70 @@
+{
+    "preference": {
+        "geetest_url": "",
+        "geetest_method": "get",
+        "geetest_params": {
+            "userkey": "",
+            "captchaId": "{captcha_id}",
+            "isJson": "2"
+        },
+        "geetest_data": {},
+        "geetest_validate_path": "$.data.validate",
+        "geetest_challenge_path": "$.data.challenge",
+        "geetest_result_path": "$.data",
+        "geetest_lot_number_path": "$.data.lot_number",
+        "geetest_pass_token_path": "$.data.pass_token",
+        "geetest_gen_time_path": "$.data.gen_time",
+        "geetest_captcha_output_path": "$.data.captcha_output",
+        "get_geetest_url": "",
+        "get_geetest_method": "get",
+        "get_geetest_params": {
+            "userkey": "",
+            "captchaId": "{captcha_id}",
+            "isJson": "2"
+        },
+        "get_geetest_data": {},
+        "get_geetest_validate_path": "$.data.validate",
+        "get_geetest_challenge_path": "$.data.challenge",
+        "get_geetest_result_path": "$",
+        "get_geetest_lot_number_path": "$.data.lot_number",
+        "get_geetest_pass_token_path": "$.data.pass_token",
+        "get_geetest_gen_time_path": "$.data.gen_time",
+        "get_geetest_captcha_output_path": "$.data.captcha_output",
+        "get_geetest_try_count": 5
+    },
+    "accounts": [
+        {
+            "uid": "你的UID",
+            "password": "你的明文密码或32位MD5",
+            "cookies": {
+                "passToken": "",
+                "cUserId": "",
+                "userId": "你的UID",
+                "passInfo": "login-end"
+            },
+            "login_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+            "deviceId": "wb_xxxxxxxxxxxx",
+            "pass_ua": "web",
+            "uLocale": "zh_CN",
+            "user_agent": "Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36",
+            "device": "",
+            "device_model": "",
+            "CheckIn": true,
+            "BrowseUserPage": true,
+            "BrowsePost": true,
+            "BrowseVideoPost": false,
+            "ThumbUp": false,
+            "BrowseSpecialPage": false,
+            "BoardFollow": false,
+            "CarrotPull": true,
+            "WxSign": true
+        }
+    ],
+    "ONEPUSH": {
+        "notifier": "",
+        "params": {
+            "title": "小米社区自动任务",
+            "markdown": false
+        }
+    }
+}
