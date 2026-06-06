@@ -38,7 +38,7 @@ def solve_with_damagou(gt, challenge):
             url = "http://api.damagou.top/apiv1/jiyanRecognize.html"
             userkey = get_damagou_userkey()
             if not userkey:
-                print("未配置打码狗 userkey，请设置 DAMAGOU_USERKEY 或 data/config.json")
+                print("未配置打码狗 userkey，请在 data/config.json 或 DAMAGOU_USERKEY 环境变量中填写")
                 return _Result(challenge="", validate="")
 
             params = {"userkey": userkey, "gt": gt, "challenge": challenge, "isJson": "2", "headers": headers_str}
