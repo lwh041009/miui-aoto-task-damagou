@@ -1,6 +1,6 @@
 # MIUI Auto Tasks Damagou
 
-小米社区 / MIUI 自动任务脚本。脚本会读取 `data/config.json`，按账号配置执行每日任务，结束后可通过 OnePush 推送运行日志。
+小米社区 / MIUI 自动任务脚本。脚本会读取本地配置文件，按账号配置执行每日任务，结束后可通过 OnePush 推送运行日志。
 
 本项目基于 [0-8-4/miui-auto-tasks](https://github.com/0-8-4/miui-auto-tasks) 修改，主要加入了打码狗验证码适配、配置模板、企业微信推送示例和日志整理。
 
@@ -34,7 +34,7 @@ Windows 也可以直接双击：
 
 ## 配置文件
 
-真实配置文件：
+推荐配置文件：
 
 ```text
 data/config.json
@@ -47,6 +47,20 @@ data/config.example.json
 ```
 
 上传仓库时只需要保留模板文件。实际运行时，把模板复制成 `data/config.json` 后再填写自己的内容。
+
+配置读取规则：
+
+- 如果存在 `data/config.json`，脚本优先读取 `data/config.json`
+- 如果不存在 `data/config.json`，脚本会自动创建并使用 `data/config.yaml`
+- 也可以通过环境变量 `MIUITASK_CONFIG_PATH` 指定配置文件路径
+
+如果想直接用自动生成的 YAML 配置，可以先运行一次脚本，让它生成：
+
+```text
+data/config.yaml
+```
+
+然后再编辑这个文件。
 
 ## 打码狗配置
 
@@ -66,7 +80,20 @@ $env:DAMAGOU_USERKEY="你的打码狗userkey"
 
 ## 账号配置
 
-每个账号放在 `accounts` 数组里。示例：
+账号密码登录时，最低建议先填这些字段：
+
+```json
+{
+    "uid": "小米账号UID",
+    "password": "明文密码或32位MD5",
+    "login_user_agent": "浏览器登录时使用的User-Agent",
+    "deviceId": "浏览器环境里的deviceId"
+}
+```
+
+`login_user_agent` 和 `deviceId` 尽量使用同一个真实浏览器环境里的值。实际测试中，浏览器先过一次验证后，再用相同登录环境登录，通常更不容易触发手机验证码。
+
+更完整的账号配置示例：
 
 ```json
 {
